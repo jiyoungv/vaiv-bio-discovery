@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+.common-layout #container {padding: 20px 0 100px;}
+.common-layout2 #container {padding: 40px 0 150px;}
+
+.common-inner {width: calc($inner-width + $inner-gutter * 2);margin: 0 auto;padding: 0 $inner-gutter;}
+
+.common-pagination {display: flex;justify-content: center;margin-top: 20px;}
+
+.common-table {width: 100%;border-collapse: separate;}
+.common-table.text-center,
+.common-table .text-center {text-align: center;}
+.common-table.text-right,
+.common-table .text-right {text-align: right;}
+.common-table thead {background: $grey100;}
+.common-table th,
+.common-table td {border-bottom: 1px solid $grey300;padding: 6px 10px;}
+.common-table th {border-top: 1px solid $grey300;color: $grey900;font-weight: $font-medium;}
+.common-table td {color: $grey;}
+
+.common-no-data {display: flex;justify-content: center;align-items: center;height: 200px;}
+.common-no-data .data-content {display: flex;justify-content: center;align-items: center;gap: 6px;color: $grey400;text-align: center;}
+
+.common-title {margin-bottom: 10px;} 
+.common-title p {@include font-mid;color: $grey900;font-weight: $font-bold;}
+
+.common-form {}
+.common-form .form-area {padding: 20px;border-radius: $radius2;background: $grey200;}
+.common-form .form-keyword {position: relative;}
+.common-form .form-keyword-input {@include font-mid;padding: 8px 10px;padding-left: calc(24px + 10px * 2);}
+.common-form .form-keyword-input:focus + .form-keyword-icon {color: $primary;}
+.common-form .form-keyword-icon {position: absolute;left: 10px;top: 50%;transform: translate(0, -50%);color: $grey400;transition: color $transition-speed;}
+.common-form .form-filter:not(:first-child) {margin-top: 20px;}
+.common-form .form-filter-title {display: flex;align-items: center;gap: 10px;margin-bottom: 10px;}
+.common-form .form-filter-title > p {@include font-mid;width: calc(120px + 6px);color: $grey900;font-weight: $font-bold;}
+.common-form .form-filter-row {display: flex;align-items: center;gap: 10px;padding: 0 6px;}
+.common-form .form-filter-row:not(:last-child) {margin-bottom: 10px;}
+.common-form .form-filter-label {flex-shrink: 0;display: inline-block;width: 120px;color: $grey;font-weight: $font-medium;}
+.common-form .form-filter-radio-row {display: flex;flex-wrap: wrap;align-items: center;gap: 6px 20px;}
+.common-form .form-filter-radio {padding: 4px 0;}
+.common-form .form-filter-radio.type-detail {padding-right: 20px;}
+.common-form .form-filter-radio.type-detail::after {content: '\ea4e';font-family: $font-icon;display: inline-block;position: absolute;right: 0;top: 50%;transform: translate(0, -50%);color: $grey400;font-size: $font-large;transition: transform $transition-speed;}
+.common-form .form-filter-radio.type-detail.active-detail::after {transform: translate(0, -50%) rotate(180deg);}
+.common-form .form-filter-input {width: 700px;}
+.common-form .form-filter-date-range {border-color: $grey400;border-radius: $radius1;}
+.common-form .form-filter-date-range .ant-picker-input > input {text-align: center;}
+.common-form .form-filter-check-row {display: flex;flex-wrap: wrap;align-items: center;gap: 6px 10px;}
+.common-form .form-filter-check label {padding: 4px 12px 4px calc(20px + 8px);border: 1px solid $grey300;border-radius: $radius3;}
+.common-form .form-filter-check label::before {left: 8px;}
+.common-form .form-filter-check input:checked + label {border-color: $primary;}
+.common-form .form-filter-caution {display: flex;align-items: center;gap: 4px;margin-bottom: 6px;color: $danger;}
+.common-form .form-filter-caution p {@include font-small;font-weight: $font-medium;}
+.common-form .form-button-row {display: flex;justify-content: center;margin-top: 40px}
+.common-form .form-button-submit {@include font-large;width: 180px;}
+
+.common-document-list > li {padding: 6px 6px 12px;border-bottom: 1px solid $grey300;}
+.common-document-list .list-title {margin-bottom: 5px;}
+.common-document-list .list-title a {@include font-mid;display: inline-block;color: $grey800;font-weight: $font-bold;text-decoration: underline;transition: color $transition-speed;}
+.common-document-list .list-title a:hover {color: $primary;}
+.common-document-list .list-text {position: relative;}
+.common-document-list .list-text.cut-toggle::after {content: '';display: block;position: absolute;left: 0;bottom: 0;width: 100%;height: calc($font-base * $line-height2 * 1.5);background: linear-gradient(180deg, transparent 0%, #FFF 100%);}
+.common-document-list .list-text.cut-toggle p {@include text-cut-line($line-height2, 3);}
+.common-document-list .list-text.cut-toggle.open {padding-bottom: 20px;}
+.common-document-list .list-text.cut-toggle.open::after {display: none;}
+.common-document-list .list-text.cut-toggle.open p {@include text-cut-clear;}
+.common-document-list .list-text.cut-toggle.open .list-text-button-more {transform: translate(-50%, 0) rotate(180deg);}
+.common-document-list .list-text.cut-toggle.open .list-text-button-more:hover {transform: translate(-50%, -4px) rotate(180deg);}
+.common-document-list .list-text.cut p {@include text-cut-line($line-height2, 2);}
+.common-document-list .list-text p {color: $grey;}
+.common-document-list .list-text p mark {background: $primary100;color: $primary;font-weight: $font-medium;}
+.common-document-list .list-text-button-more {z-index: 5;display: inline-flex;justify-content: center;align-items: center;position: absolute;bottom: 0;left: 50%;transform: translate(-50%, 0);width: 20px;height: 20px;border: 1px solid $primary;border-radius: 50%;background: $white;color: $primary;transition: transform $transition-speed;cursor: pointer;}
+.common-document-list .list-text-button-more:hover {transform: translate(-50%, 4px);}
+.common-document-list .list-text-button-more .more-icon {flex-shrink: 0;}
+
+.common-result {margin-top: 50px;}
+.common-result .result-area {display: flex;gap: 10px;}
+.common-result .result-area1 .result-col1 {width: 30%;}
+.common-result .result-area1 .result-col2 {width: 70%;}
+.common-result .result-area1 .result-col2.full {width: 100%;}
+.common-result .result-area2 .result-col1 {width: 20%;}
+.common-result .result-area2 .result-col2 {width: 25%;}
+.common-result .result-area2 .result-col3 {width: 55%;}
+.common-result .result-table-wrap {@include scrollbar-style(6);overflow-y: auto;max-height: 85vh;}
+.common-result .result-table thead {position: sticky;top: 0;left: 0;}
+.common-result .result-table tbody tr:not(.no-data) {transition: background $transition-speed;cursor: pointer;}
+.common-result .result-table tbody tr:not(.no-data):hover {background: rgba($primary, 0.1);}
+.common-result .result-table tbody tr:not(.no-data).active {background: $primary400;pointer-events: none;}
+.common-result .result-table tbody tr:not(.no-data).active td {color: $white;font-weight: $font-bold;}
+.common-result .result-document-title {padding: 6px 10px;border: 1px solid $grey300;border-left: 0;border-right: 0;background: $grey100;text-align: center;}
+.common-result .result-document-title p {color: $grey900;font-weight: $font-medium;}
+
+.common-service .common-inner {width: calc(1000px + $inner-gutter * 2);}
+.common-service-title {margin-bottom: 50px;text-align: center;}
+.common-service-title h6 {@include h6;display: inline-block;position: relative;color: $grey900;font-weight: $font-bold;}
+.common-service-title h6::before {content: '';display: inline-block;position: absolute;bottom: 4px;left: 50%;transform: translate(-50%, 0);width: calc(100% + 10px);height: 5px;background: $primary400;opacity: 0.4;}
+.common-service-list > li:not(:last-child) {margin-bottom: 40px;}
+.common-service-list .list-title {margin-bottom: 10px;}
+.common-service-list .list-title p {@include font-mid;color: $grey900;font-weight: $font-bold;}
+.common-service-list .list-text p {color: $grey;}
+.common-service-list .list-text a {color: $primary400;font-weight: $font-medium;text-decoration: underline;}

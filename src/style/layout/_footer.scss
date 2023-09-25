@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+#footer {padding: 20px 0;border-top: 1px solid $grey300;}
+.footer-area {display: flex;justify-content: space-between;align-items: flex-start;}
+.footer-info {}
+.footer-info .info-title {margin-bottom: 4px;}
+.footer-info .info-title p {@include font-small;display: inline-block;padding: 2px 8px;border-radius: $radius1;background: $grey300;color: $grey900;font-weight: $font-medium;}
+.footer-info .info-text {color: $grey;}
+.footer-snb-list {display: flex;align-items: center;gap: 30px;}
+.footer-snb-list .list-link {color: $grey;}
+.footer-snb-list .list-link:hover {text-decoration: underline;}

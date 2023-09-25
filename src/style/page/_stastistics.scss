@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+.stat-page #container {padding-top: 40px;}
+.stat-title {margin-bottom: 30px;}
+.stat-title p {@include font-large;color: $grey900;font-weight: $font-bold;}
+.stat-area {display: flex;justify-content: space-between;align-items: flex-start;gap: 20px;}
+.stat-area .common-title {text-align: center;}
+.stat-col {width: 33.33%;}

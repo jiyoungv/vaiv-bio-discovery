@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+.search-gpt-result {margin-top: 50px;}
+.search-gpt-result .result-area:not(:last-child) {margin-bottom: 20px;}
+.search-gpt-result .result-summary {padding: 10px 14px 16px;border: 2px solid $primary;border-radius: $radius1;}
+.search-gpt-result .result-summary-title {margin-bottom: 12px;padding-bottom: 6px;border-bottom: 1px solid $grey400;}
+.search-gpt-result .result-summary-title p {@include font-mid;color: $primary;font-weight: $font-bold;}
+.search-gpt-result .result-summary-text p {color: $grey;}

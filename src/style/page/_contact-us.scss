@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+.contact-us-row:not(:last-child) {margin-bottom: 40px;}
+.contact-us-row2:not(:last-child) {margin-bottom: 10px;}
+.contact-us-text1 p {@include font-mid;color: $grey;}
+.contact-us-text2 p {@include font-large;color: $grey900;font-weight: $font-bold;}
+.contact-us-email {width: 300px;padding: 8px 18px;border-radius: $radius1;background: $grey200;}
+.contact-us-email p {@include font-mid;display: inline-flex;align-items: center;gap: 5px;color: $grey900;font-weight: $font-medium;}
+.contact-us-email p i {@include font-large;}
+.contact-us-email a:hover {text-decoration: underline;}
